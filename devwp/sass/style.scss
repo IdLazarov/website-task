@@ -1,8 +1,11 @@
 
+$black:black;
 $primary-color :#222e2e;
 $details-color:	#008B8B;
 $white-color:white;
 $bold:bold;
+$action-border-color:#2F4F4F;
+$info-col-color:#003333;
 
 @font-face {
     font-family: myFirstLogoFont;
@@ -22,7 +25,7 @@ html {
             margin: 0;
         }
         header{
-            background-color: $primary-color;
+            background-color: $black;
             color:$white-color;
 
             .padding-10 {
@@ -110,14 +113,26 @@ html {
                 border-width: 10px;  
             }
             #info-col {
-                background-color: $primary-color;
+                background-color: $info-col-color;
                 border-color: $details-color;
             }
             #action-col {
                 padding-top: 20px;
                 padding-bottom: 20px;
                 background-color: $primary-color;
-                border-color: $details-color;
+                border-color: $action-border-color;
+                ul{
+                    padding: 0px;
+                    li {
+                        list-style-type: none;
+                        padding: 0;
+                        a{
+                            color: $white-color;
+                        }
+                        
+                    }
+                }
+                
 
                 .swiper-container {
                     width: 100%;
@@ -157,9 +172,38 @@ html {
             color:$white-color; 
             align-content: center;
             
-            p {
+            #copyright{
                 margin: 0;
+                padding: 0;
+                p {
+                    margin: 0;
+                    padding: 0;
+                }
             }
+            #terms-of-use{
+                text-align: right;
+                padding-right: 0;
+                ul{
+                    
+                    padding: 0;
+                    display: inline-flex;
+                    align-content: flex-end;
+                    li {
+                       
+                        
+                        list-style-type: none;
+                        padding: 0;
+                        a{
+                            
+                            padding-left: 16px;
+                            color: $white-color;
+                        }
+                        
+                    }
+                }
+
+            }
+            
         }
       }
 }
